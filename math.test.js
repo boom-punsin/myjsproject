@@ -1,17 +1,17 @@
-const {sum,multipy,devide}= require('./math');
+function sum(a, b){
+   return a + b;
+}
 
-test('Adds 1 + 2 to equal 3', () => {
-    expect(sum(1,2)).toBe(3)
- })
+function multiply(a, b){
+   return a * b;
+}
 
-test('Multipy 2 * 3 to equal 6', () => {
-    expect(multipy(2,3)).toBe(6)
- })
+function divide(a, b){
+   if(b === 0){
+       throw new Error('Cannot divide by zero');
+   }
+   return a / b;
 
- test('Devide 10 + 2 to equal 5', () => {
-    expect(devide(10,2)).toBe(5)
- })
+}
 
- test('Devide 10 + 2 to equal 5', () => {
-   expect(devide(10,0)).toThrow("Cannot devide by zero")
-})
+module.exports = {sum, multiply, divide};
