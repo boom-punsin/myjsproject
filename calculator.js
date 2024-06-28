@@ -1,4 +1,4 @@
-const {sum, multipy, devide} = require('./math')
+const {sum, multipy, devide} = require('./calculator')
 
 function calculate(a,b,c){
     const additionResult = sum(a,b);
