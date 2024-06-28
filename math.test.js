@@ -1,17 +1,16 @@
-function sum(a, b){
-   return a + b;
-}
+const {sum, multiply, divide} = require('./math');
+test('add 1+2 to equal 3', () => {
+     expect(sum(1, 2)).toBe(3); 
+})
 
-function multiply(a, b){
-   return a * b;
-}
+test('multiply 2*3 to equal 6', () => {
+        expect(multiply(2, 3)).toBe(6); 
+    })
 
-function divide(a, b){
-   if(b === 0){
-       throw new Error('Cannot divide by zero');
-   }
-   return a / b;
+test('divide 6/3 to equal 2', () => {
+        expect(divide(6, 3)).toBe(2); 
+    })
 
-}
-
-module.exports = {sum, multiply, divide};
+    test('divide 6/0 to throw error', () => {
+        expect(() => divide(6, 0)).toThrow('Cannot divide by zero'); 
+    })
