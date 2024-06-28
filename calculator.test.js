@@ -1,14 +1,13 @@
-const {calculate} = require('./calculate');
+const calculate = require('./calculator');
 
-test('add 1+2 to equal 3', () => {
-     expect(calculate(1, 2,3)).toBe(4.5); 
-})
+test('calculates (1 + 2) * 3 / 2 to equal 4.5', () => {
+  expect(calculate(1, 2, 3)).toBe(4.5);
+});
 
-test('add 1+2 to equal 3', () => {
-   expect(calculate(5, 10, 15)).toBe(112.5); 
-})
+test('calculates (4 + 5) * 6 / 2 to equal 27', () => {
+  expect(calculate(4, 5, 6)).toBe(27);
+});
 
-test('add 1+2 to equal 3', () => {
-   expect(calculate(10, 20, 30)).toBe(150); 
-})
-    
+test('calculates (0 + 0) * 1 / 2 to equal 0', () => {
+  expect(calculate(0, 0, 1)).toBe(0);
+});
